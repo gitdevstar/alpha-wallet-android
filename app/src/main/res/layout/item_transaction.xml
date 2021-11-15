@@ -37,29 +37,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font_regular"
-                android:textColor="@color/text_dark_gray"
+                android:textColor="@color/text_black"
                 android:maxLines="2"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:textSize="@dimen/sp17"
                 tools:text="Received Chain" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
 
-                <com.alphawallet.app.widget.ChainName
-                    android:id="@+id/chain_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="3dp"
-                    android:gravity="start"
-                    android:visibility="visible"
-                    custom:font_size="10" />
-
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -69,44 +53,30 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/value_layout"
             android:layout_alignParentEnd="true"
-            android:fontFamily="@font/font_semibold"
             android:layout_centerVertical="true"
+            android:fontFamily="@font/font_semibold"
             android:textColor="@color/black"
             android:textSize="17sp"
+            android:textStyle="bold"
             tools:text="+ 70,000,000,000.3455 ETH" />
+
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/value_layout"
+            android:layout_alignStart="@id/value_layout"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_toStartOf="@id/supplimental"
+            android:ellipsize="end"
+            android:fontFamily="@font/font_light"
+            android:textColor="@color/dove"
+            android:textSize="@dimen/sp12"
+            tools:text="0x123456778 ... 3434" />
 
         <TextView
             android:id="@+id/supplimental"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/address"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_toStartOf="@id/text_tx_time"
-            android:fontFamily="@font/font_regular"
-            android:maxLines="1"
-            android:textAppearance="?attr/textAppearanceListItem"
-            android:textColor="@color/text_dark_gray"
-            android:textSize="12sp"
-            android:visibility="visible"
-            tools:text="+1.0 ETH" />
-
-            <TextView
-                android:id="@+id/address"
-                android:layout_marginTop="@dimen/dp10"
-                android:layout_toStartOf="@id/supplimental"
-                android:layout_below="@id/value_layout"
-                android:layout_alignStart="@id/value_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="@font/font_light"
-                tools:text="0x123456778 ... 3434"
-                android:textColor="@color/dove"
-                android:textSize="@dimen/sp12" />
-
-        <TextView
-            android:id="@+id/text_tx_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/address"
@@ -116,7 +86,7 @@
             android:textColor="@color/dove"
             android:layout_gravity="center_vertical"
             android:maxLines="1"
-            tools:text="11:53 pm"
+            tools:text="0.00"
             android:textAppearance="?attr/textAppearanceListItem"
             android:textSize="12sp" />
 
