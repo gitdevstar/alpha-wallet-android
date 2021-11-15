@@ -533,7 +533,7 @@
     <string name="provide_authentication">Cung cấp xác thực để tạo khóa</string>
     <string name="import_error">Nhập lỗi, hãy thử nhập lại lần nữa.</string>
     <string name="watch_exists">Ví %1$s đã đầy - không cần phải xem</string>
-    <string name="welcome_to_alphawallet">Chào mứng đến với AlphaWallet</string>
+    <string name="welcome_to_alphawallet">Chào mứng đến với TonyPayWallet</string>
     <string name="lock_seed_phrase">Khóa cụm từ bí mật</string>
     <string name="no_key">Không tìm thấy chuỗi khóa</string>
     <string name="pending_transaction">Giao dịch đang chờ xử lý ...</string>

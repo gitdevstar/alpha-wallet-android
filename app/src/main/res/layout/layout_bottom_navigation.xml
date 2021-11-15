@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font_semibold"
                 android:text="@string/wallet_label"
-                android:textColor="@color/dove"
+                android:textColor="@color/bottom_tab_color"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font_semibold"
                 android:text="@string/activity_label"
-                android:textColor="@color/dove"
+                android:textColor="@color/bottom_tab_color"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -78,15 +78,15 @@
                 android:id="@+id/nav_browser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_tab_browser" />
+                android:src="@drawable/ic_tab_exchange" />
 
             <TextView
                 android:id="@+id/nav_browser_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font_semibold"
-                android:text="@string/browser_label"
-                android:textColor="@color/dove"
+                android:text="@string/exchange_label"
+                android:textColor="@color/bottom_tab_color"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -115,7 +115,7 @@
                 android:fontFamily="@font/font_semibold"
                 android:lineSpacingExtra="8sp"
                 android:text="@string/settings_label"
-                android:textColor="@color/dove"
+                android:textColor="@color/bottom_tab_color"
                 android:textSize="12sp" />
 
             <LinearLayout

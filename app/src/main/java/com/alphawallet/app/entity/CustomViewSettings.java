@@ -29,7 +29,8 @@ public class CustomViewSettings
     //If you leave the locked chains empty, the token will appear if the chain is selected
     private static final List<TokenInfo> lockedTokens = Arrays.asList(
             // new TokenInfo(String TokenAddress, String TokenName, String TokenSymbol, int TokenDecimals, boolean isEnabled, long ChainId)
-            //new TokenInfo("0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "USD Coin", "USDC", 6, true, EthereumNetworkBase.MAINNET_ID),
+            new TokenInfo("0xca1262e77fb25c0a4112cfc9bad3ff54f617f2e6", "Wrapped JAXNET", "WJXN", 0, true, EthereumNetworkBase.BINANCE_MAIN_ID)
+//            new TokenInfo("0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "USD Coin", "USDC", 6, true, EthereumNetworkBase.MAINNET_ID),
             //new TokenInfo("0x6C8c6b02E7b2BE14d4fA6022Dfd6d75921D90E4E", "Compound BAT", "CBAT", 8, true, EthereumNetworkBase.MAINNET_ID)
     );
 
@@ -37,7 +38,8 @@ public class CustomViewSettings
     //If blank, enable the user filter select dialog, if there are any entries here, the select network dialog is disabled
     //Note: you should always enable the chainId corresponding to the chainIDs in the lockedTokens.
     private static final List<Long> lockedChains = Arrays.asList(
-            //EthereumNetworkBase.MAINNET_ID //EG only show Main, xdai, classic and two testnets. Don't allow user to select any others
+//            EthereumNetworkBase.MAINNET_ID, //EG only show Main, xdai, classic and two testnets. Don't allow user to select any others
+            EthereumNetworkBase.BINANCE_MAIN_ID
             //EthereumNetworkBase.XDAI_ID,
             //EthereumNetworkBase.RINKEBY_ID, //You can mix testnets and mainnets, but probably shouldn't as it may result in people getting scammed
             //EthereumNetworkBase.GOERLI_ID

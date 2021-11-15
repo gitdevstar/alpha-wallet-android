@@ -229,9 +229,9 @@ public class WalletViewModel extends BaseViewModel
         }
     }
 
-    public void checkBackup()
+    public double checkBackup()
     {
-        if (TextUtils.isEmpty(getWalletAddr()) || System.currentTimeMillis() < (lastBackupCheck + BALANCE_BACKUP_CHECK_INTERVAL)) return;
+        if (TextUtils.isEmpty(getWalletAddr()) || System.currentTimeMillis() < (lastBackupCheck + BALANCE_BACKUP_CHECK_INTERVAL)) return 0;
         lastBackupCheck = System.currentTimeMillis();
         double walletUSDValue = tokensService.getUSDValue();
 
@@ -244,6 +244,8 @@ public class WalletViewModel extends BaseViewModel
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(backupEvent::postValue, this::onTokenBalanceError).isDisposed();
         }
+
+        return walletUSDValue;
     }
 
     private void onTokenBalanceError(Throwable throwable)

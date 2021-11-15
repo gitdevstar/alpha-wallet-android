@@ -14,10 +14,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -179,6 +181,7 @@ public class WalletFragment extends BaseFragment implements
 
         systemView.attachRecyclerView(recyclerView);
         systemView.attachSwipeRefreshLayout(refreshLayout);
+
     }
 
     private void onDefaultWallet(Wallet wallet)
@@ -196,6 +199,8 @@ public class WalletFragment extends BaseFragment implements
 
     private void setRealmListener(long updateTime)
     {
+        Log.e("wallet metas", "here");
+
         if (realmUpdates != null)
         {
             realmUpdates.removeAllChangeListeners();
@@ -210,6 +215,7 @@ public class WalletFragment extends BaseFragment implements
             if (!isVisible && realmTokens.size() == 0) return;
             long lastUpdateTime = updateTime;
             List<TokenCardMeta> metas = new ArrayList<>();
+
             //make list
             for (RealmToken t : realmTokens)
             {
@@ -237,6 +243,7 @@ public class WalletFragment extends BaseFragment implements
 
     private void updateMetas(List<TokenCardMeta> metas)
     {
+
         handler.post(() -> {
             if (metas.size() > 0)
             {
@@ -246,7 +253,8 @@ public class WalletFragment extends BaseFragment implements
 
             if (viewModel.getWallet().type != WalletType.WATCH && isVisible)
             {
-                viewModel.checkBackup();
+                double value = viewModel.checkBackup();
+//                toolbarTitle.setText("$" + value);
             }
         });
     }
@@ -276,7 +284,7 @@ public class WalletFragment extends BaseFragment implements
         }
         tabLayout.addTab(tabLayout.newTab().setText(R.string.all));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.currency));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.collectibles));
+//        tabLayout.addTab(tabLayout.newTab().setText(R.string.collectibles));
         //tabLayout.addTab(tabLayout.newTab().setText(R.string.attestations));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()

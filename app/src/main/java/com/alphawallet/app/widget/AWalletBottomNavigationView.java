@@ -84,7 +84,7 @@ public class AWalletBottomNavigationView extends LinearLayout {
         selectedItem = index;
         switch (index) {
             case DAPP_BROWSER:
-                dappBrowser.setImageResource(R.drawable.ic_tab_browser_active);
+                dappBrowser.setImageResource(R.drawable.ic_tab_exchange_active);
                 dappBrowserLabel.setTextColor(getResources().getColor(R.color.colorHighlight, getContext().getTheme()));
                 break;
             case WALLET:
@@ -107,15 +107,15 @@ public class AWalletBottomNavigationView extends LinearLayout {
     }
 
     private void deselectAll() {
-        dappBrowser.setImageResource(R.drawable.ic_tab_browser);
+        dappBrowser.setImageResource(R.drawable.ic_tab_exchange);
         wallet.setImageResource(R.drawable.ic_tab_wallet);
         settings.setImageResource(R.drawable.ic_tab_settings);
         activity.setImageResource(R.drawable.ic_tab_activity);
         //reset text colour
-        dappBrowserLabel.setTextColor(getContext().getColor(R.color.dove));
-        walletLabel.setTextColor(getContext().getColor(R.color.dove));
-        settingsLabel.setTextColor(getContext().getColor(R.color.dove));
-        activityLabel.setTextColor(getContext().getColor(R.color.dove));
+        dappBrowserLabel.setTextColor(getContext().getColor(R.color.bottom_tab_color));
+        walletLabel.setTextColor(getContext().getColor(R.color.bottom_tab_color));
+        settingsLabel.setTextColor(getContext().getColor(R.color.bottom_tab_color));
+        activityLabel.setTextColor(getContext().getColor(R.color.bottom_tab_color));
     }
 
     public interface OnBottomNavigationItemSelectedListener {

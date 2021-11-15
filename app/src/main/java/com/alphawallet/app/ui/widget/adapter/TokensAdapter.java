@@ -145,7 +145,7 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
                 break;
             }
             case ManageTokensHolder.VIEW_TYPE:
-                holder = new ManageTokensHolder(R.layout.layout_manage_tokens, parent);
+                holder = new ManageTokensHolder(R.layout.layout_manage_tokens_button, parent);
                 break;
             case WarningHolder.VIEW_TYPE:
                 holder = new WarningHolder(R.layout.item_warning, parent);

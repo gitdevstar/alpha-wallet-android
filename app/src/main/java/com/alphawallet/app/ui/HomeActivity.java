@@ -447,7 +447,7 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
             walletTitle = getString(R.string.toolbar_header_wallet);
         }
 
-        ((WalletFragment) walletFragment).setToolbarTitle(walletTitle);
+        ((WalletFragment) walletFragment).setToolbarTitle("$0.00");
     }
 
     private void onError(ErrorEnvelope errorEnvelope)
