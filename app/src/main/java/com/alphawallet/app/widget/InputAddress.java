@@ -147,7 +147,7 @@ public class InputAddress extends RelativeLayout implements ItemClickListener, E
         if (labelResId != R.string.empty)
         {
             labelText.setText(labelResId);
-            labelText.setVisibility(View.VISIBLE);
+//            labelText.setVisibility(View.VISIBLE);
         }
 
         editText.setHint(hintRedId);

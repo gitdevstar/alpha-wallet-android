@@ -44,7 +44,6 @@ public class TransferHolder extends BinderViewHolder<TokenTransferData> implemen
     public static final int VIEW_TYPE = 2017;
 
     private final TokenIcon tokenIcon;
-    private final TextView date;
     private final TextView type;
     private final TextView address;
     private final TextView value;
@@ -63,7 +62,6 @@ public class TransferHolder extends BinderViewHolder<TokenTransferData> implemen
                           AssetDefinitionService svs)
     {
         super(R.layout.item_transaction, parent);
-        date = findViewById(R.id.text_tx_time);
         tokenIcon = findViewById(R.id.token_icon);
         address = findViewById(R.id.address);
         type = findViewById(R.id.type);
@@ -133,8 +131,6 @@ public class TransferHolder extends BinderViewHolder<TokenTransferData> implemen
         tokenIcon.setStatusIcon(data.getEventStatusType());
 
         //timestamp
-        date.setText(Utils.localiseUnixTime(getContext(), data.getTimeStampSeconds()));
-        date.setVisibility(View.VISIBLE);
 
         if (token.tokenInfo.chainId == MAINNET_ID)
         {

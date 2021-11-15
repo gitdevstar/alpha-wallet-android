@@ -52,7 +52,7 @@
             android:layout_marginRight="4dp"
             android:layout_weight="0.5"
             tools:text="Primary"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/secondary_button"
@@ -64,7 +64,7 @@
             android:fontFamily="@font/font_semibold"
             tools:text="Secondary"
             android:textSize="17sp"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/more_button"
@@ -77,6 +77,6 @@
             android:gravity="center"
             android:src="@drawable/ic_menu_azure"
             app:tint="@drawable/selector_button_text_secondary"
-            android:visibility="visible" />
+            android:visibility="gone" />
     </LinearLayout>
 </LinearLayout>
