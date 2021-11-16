@@ -86,7 +86,7 @@
             android:fontFamily="@font/font_semibold"
             android:text="@string/speed_average"
             android:gravity="start"
-            android:textSize="@dimen/sp17"/>
+            android:textSize="@dimen/sp12"/>
 
         <TextView
             android:id="@+id/edit_text"
@@ -96,9 +96,9 @@
             android:layout_weight="0.6"
             android:fontFamily="@font/font_semibold"
             android:gravity="center_horizontal"
-            android:textColor="@color/azure"
+            android:textColor="@color/colorPrimary"
             android:lines="1"
-            android:textSize="@dimen/sp17"
+            android:textSize="@dimen/sp12"
             android:text="@string/edit"
             android:visibility="visible" />
 
