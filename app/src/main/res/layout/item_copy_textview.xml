@@ -4,6 +4,8 @@
     android:id="@+id/view_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/background_round_border"
+    android:padding="@dimen/dp9"
     android:orientation="horizontal">
 
     <TextView
@@ -17,6 +19,7 @@
         android:maxLines="2"
         android:lineHeight="12pt"
         tools:text="0xbc9a1026a4bc6f0ba8bbe486d1d09da5732b39e4"
+        android:textColor="@color/text_black"
         android:textSize="@dimen/sp17" />
 
     <ImageView
