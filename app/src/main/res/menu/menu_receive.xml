@@ -13,6 +13,7 @@
         android:icon="@drawable/ic_ethereum"
         android:orderInCategory="1"
         android:title="@string/show_token_contract"
+        android:visible="false"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_my_address"
