@@ -532,7 +532,7 @@ public class BackupKeyActivity extends BaseActivity implements
     private void VerifySeedPhrase() {
         setContentView(R.layout.activity_verify_seed_phrase);
         initViews();
-        functionButtonBar.setPrimaryButtonText(R.string.action_continue);
+        functionButtonBar.setPrimaryButtonText(R.string.action_verify);
         functionButtonBar.setPrimaryButtonClickListener(v -> TestSeedPhrase());
         functionButtonBar.setPrimaryButtonEnabled(false);
         state = BackupState.VERIFY_SEED_PHRASE;

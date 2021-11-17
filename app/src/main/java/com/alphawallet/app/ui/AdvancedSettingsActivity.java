@@ -5,7 +5,6 @@ import static com.alphawallet.app.C.CHANGE_CURRENCY;
 import static com.alphawallet.app.C.EXTRA_CURRENCY;
 import static com.alphawallet.app.C.EXTRA_LOCALE;
 import static com.alphawallet.app.C.EXTRA_STATE;
-import static com.alphawallet.app.C.PAGE_LOADED;
 import static com.alphawallet.app.C.RESET_WALLET;
 
 import android.Manifest;

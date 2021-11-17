@@ -27,7 +27,6 @@ import com.alphawallet.app.service.TokensService;
 import com.alphawallet.app.ui.widget.entity.AmountReadyCallback;
 import com.alphawallet.app.ui.widget.entity.NumericInput;
 import com.alphawallet.app.util.BalanceUtils;
-import com.alphawallet.token.entity.ContractAddress;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -41,7 +40,6 @@ import java.text.DecimalFormat;
 import io.realm.Case;
 import io.realm.Realm;
 import io.realm.RealmQuery;
-import io.realm.Sort;
 
 import static com.alphawallet.app.C.GAS_LIMIT_MIN;
 import static com.alphawallet.app.repository.TokensRealmSource.databaseKey;

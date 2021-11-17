@@ -1,16 +1,11 @@
 package com.alphawallet.app.ui.widget.holder;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -30,7 +25,6 @@ import com.alphawallet.app.service.AssetDefinitionService;
 import com.alphawallet.app.service.TickerService;
 import com.alphawallet.app.service.TokensService;
 import com.alphawallet.app.ui.widget.OnTokenClickListener;
-import com.alphawallet.app.widget.ChainName;
 import com.alphawallet.app.widget.TokenIcon;
 
 import java.math.BigDecimal;
