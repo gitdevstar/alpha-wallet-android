@@ -12,7 +12,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="72dp"
         android:layout_marginEnd="72dp"
-        android:src="@drawable/ic_icons_no_transactions"
+        android:src="@drawable/empty_activity"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
