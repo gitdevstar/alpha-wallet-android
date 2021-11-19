@@ -153,21 +153,21 @@ public class NewSettingsFragment extends BaseFragment {
 
         myAddressSetting =
                 new SettingsItemView.Builder(getContext())
-                        .withIcon(R.drawable.ic_settings_wallet_address)
+                        .withIcon(R.drawable.ic_settings_showwallet)
                         .withTitle(R.string.title_show_wallet_address)
                         .withListener(this::onShowWalletAddressSettingClicked)
                         .build();
 
         changeWalletSetting =
                 new SettingsItemView.Builder(getContext())
-                        .withIcon(R.drawable.ic_settings_change_wallet)
+                        .withIcon(R.drawable.ic_settings_change_add_wallet)
                         .withTitle(R.string.title_change_add_wallet)
                         .withListener(this::onChangeWalletSettingClicked)
                         .build();
 
         backUpWalletSetting =
                 new SettingsItemView.Builder(getContext())
-                        .withIcon(R.drawable.ic_settings_backup)
+                        .withIcon(R.drawable.ic_settings_backup_wallet)
                         .withTitle(R.string.title_back_up_wallet)
                         .withListener(this::onBackUpWalletSettingClicked)
                         .build();
@@ -179,14 +179,14 @@ public class NewSettingsFragment extends BaseFragment {
                 .build();
 
         nameThisWallet = new SettingsItemView.Builder(getContext())
-                .withIcon(R.drawable.ic_settings_name_this_wallet)
+                .withIcon(R.drawable.ic_settings_name_wallet)
                 .withTitle(R.string.name_this_wallet)
                 .withListener(this::onNameThisWallet)
                 .build();
 
         walletConnectSetting =
                 new SettingsItemView.Builder(getContext())
-                        .withIcon(R.drawable.ic_wallet_connect)
+                        .withIcon(R.drawable.ic_settings_wallet_connect)
                         .withTitle(R.string.title_wallet_connect)
                         .withListener(this::onWalletConnectSettingClicked)
                         .build();
@@ -194,7 +194,7 @@ public class NewSettingsFragment extends BaseFragment {
         notificationsSetting =
                 new SettingsItemView.Builder(getContext())
                         .withType(SettingsItemView.Type.TOGGLE)
-                        .withIcon(R.drawable.ic_settings_notifications)
+                        .withIcon(R.drawable.ic_settings_notification)
                         .withTitle(R.string.title_notifications)
                         .withListener(this::onNotificationsSettingClicked)
                         .build();
@@ -209,7 +209,7 @@ public class NewSettingsFragment extends BaseFragment {
 
         selectNetworksSetting =
                 new SettingsItemView.Builder(getContext())
-                        .withIcon(R.drawable.ic_settings_networks)
+                        .withIcon(R.drawable.ic_settings_select_network)
                         .withTitle(R.string.select_active_networks)
                         .withListener(this::onSelectNetworksSettingClicked)
                         .build();
