@@ -232,13 +232,13 @@ public class ActivityAdapter extends RecyclerView.Adapter<BinderViewHolder<?>> i
 
     public void updateActivityItems(ActivityMeta[] activityItems)
     {
-        if (activityItems.length == 0) return ;
+//        if (activityItems.length == 0) return ;
 
         items.beginBatchedUpdates();
-        if (itemLimit != 0)
-        {
+//        if (itemLimit != 0)
+//        {
             items.add(new LabelSortedItem(new Date(Long.MAX_VALUE))); //always at top of list
-        }
+//        }
 
         for (ActivityMeta item : activityItems)
         {

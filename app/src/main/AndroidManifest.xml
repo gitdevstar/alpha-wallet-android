@@ -214,7 +214,7 @@
             android:label="@string/toolbar_header_help" />
 
         <activity
-            android:name="com.alphawallet.app.ui.TokenDetailActivity"
+            android:name="com.alphawallet.app.ui.NFTDetailActivity"
             android:label="@string/token_details" />
 
         <activity

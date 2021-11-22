@@ -195,6 +195,7 @@ public class WalletViewModel extends BaseViewModel
         {
             case ETHEREUM:
             case ERC20:
+            case BEP20:
             case CURRENCY:
             case DYNAMIC_CONTRACT:
             case LEGACY_DYNAMIC_CONTRACT:

@@ -43,7 +43,7 @@ import static com.alphawallet.app.C.EXTRA_TOKENID_LIST;
 import static com.alphawallet.app.C.Key.WALLET;
 import static com.alphawallet.app.entity.DisplayState.TRANSFER_TO_ADDRESS;
 
-public class TokenDetailActivity extends BaseActivity implements StandardFunctionInterface
+public class NFTDetailActivity extends BaseActivity implements StandardFunctionInterface
 {
     @Inject
     protected TokenFunctionViewModelFactory tokenFunctionViewModelFactory;

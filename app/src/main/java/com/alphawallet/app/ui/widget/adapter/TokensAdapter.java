@@ -133,7 +133,13 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
         BinderViewHolder<?> holder = null;
         switch (viewType) {
             case TokenHolder.VIEW_TYPE: {
-                TokenHolder tokenHolder = new TokenHolder(parent, assetService, tokensService, realm);
+                TokenHolder tokenHolder = new TokenHolder(parent, assetService, tokensService, realm, false);
+                tokenHolder.setOnTokenClickListener(onTokenClickListener);
+                holder = tokenHolder;
+                break;
+            }
+            case TokenHolder.VIEW_TYPE_DETAIL: {
+                TokenHolder tokenHolder = new TokenHolder(parent, assetService, tokensService, realm, true);
                 tokenHolder.setOnTokenClickListener(onTokenClickListener);
                 holder = tokenHolder;
                 break;
@@ -249,6 +255,32 @@ public class TokensAdapter extends RecyclerView.Adapter<BinderViewHolder> {
             else
             {
                 TokenSortedItem tsi = new TokenSortedItem(TokenHolder.VIEW_TYPE, token, token.nameWeight);
+                if (debugView) tsi.debug();
+                position = items.add(tsi);
+            }
+
+            if (notify) notifyItemChanged(position);
+        }
+        else
+        {
+            removeToken(token);
+        }
+    }
+
+    public void updateDetailToken(TokenCardMeta token, boolean notify)
+    {
+        if (canDisplayToken(token))
+        {
+            //does this token already exist with a different weight (ie name has changed)?
+            removeMatchingTokenDifferentWeight(token);
+            int position = -1;
+            if (gridFlag)
+            {
+                position = items.add(new TokenSortedItem(TokenGridHolder.VIEW_TYPE, token, token.nameWeight));
+            }
+            else
+            {
+                TokenSortedItem tsi = new TokenSortedItem(TokenHolder.VIEW_TYPE_DETAIL, token, token.nameWeight);
                 if (debugView) tsi.debug();
                 position = items.add(tsi);
             }

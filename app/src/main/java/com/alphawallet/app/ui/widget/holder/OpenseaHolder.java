@@ -21,7 +21,7 @@ import com.alphawallet.app.R;
 import com.alphawallet.app.entity.nftassets.NFTAsset;
 import com.alphawallet.app.entity.tokens.Token;
 import com.alphawallet.app.ui.AssetDisplayActivity;
-import com.alphawallet.app.ui.TokenDetailActivity;
+import com.alphawallet.app.ui.NFTDetailActivity;
 import com.alphawallet.app.ui.widget.OnTokenClickListener;
 import com.alphawallet.app.util.KittyUtils;
 import com.alphawallet.app.widget.NFTImageView;
@@ -225,7 +225,7 @@ public class OpenseaHolder extends BinderViewHolder<TicketRange> implements Runn
             if (activeClick) return;
             activeClick = true;
             handler.postDelayed(this, 500);
-            Intent intent = new Intent(getContext(), TokenDetailActivity.class);
+            Intent intent = new Intent(getContext(), NFTDetailActivity.class);
             intent.putExtra(C.EXTRA_NFTASSET, token.getAssetForToken(tokenId.toString()));
             intent.putExtra(C.EXTRA_CHAIN_ID, token.tokenInfo.chainId);
             intent.putExtra(C.EXTRA_ADDRESS, token.getAddress());

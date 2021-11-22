@@ -32,7 +32,7 @@ import com.alphawallet.app.ui.SendActivity;
 import com.alphawallet.app.ui.SplashActivity;
 import com.alphawallet.app.ui.TokenActivity;
 import com.alphawallet.app.ui.TokenActivityFragment;
-import com.alphawallet.app.ui.TokenDetailActivity;
+import com.alphawallet.app.ui.NFTDetailActivity;
 import com.alphawallet.app.ui.TokenFunctionActivity;
 import com.alphawallet.app.ui.TokenManagementActivity;
 import com.alphawallet.app.ui.TokenScriptManagementActivity;
@@ -157,7 +157,7 @@ public abstract class BuildersModule {
 
 	@ActivityScope
 	@ContributesAndroidInjector(modules = TokenFunctionModule.class)
-	abstract TokenDetailActivity bindTokenDetailActivity();
+	abstract NFTDetailActivity bindTokenDetailActivity();
 
 	@ActivityScope
 	@ContributesAndroidInjector(modules = TokenFunctionModule.class)

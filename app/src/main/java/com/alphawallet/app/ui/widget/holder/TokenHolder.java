@@ -38,6 +38,7 @@ import static com.alphawallet.ethereum.EthereumNetworkBase.MAINNET_ID;
 public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View.OnClickListener, View.OnLongClickListener {
 
     public static final int VIEW_TYPE = 1005;
+    public static final int VIEW_TYPE_DETAIL = 10060;
     public static final String EMPTY_BALANCE = "\u2014\u2014";
 
     private final TokenIcon tokenIcon;
@@ -64,7 +65,9 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
     public Token token;
     private OnTokenClickListener onTokenClickListener;
 
-    public TokenHolder(ViewGroup parent, AssetDefinitionService assetService, TokensService tSvs, Realm r)
+    private RelativeLayout containerLayout;
+
+    public TokenHolder(ViewGroup parent, AssetDefinitionService assetService, TokensService tSvs, Realm r, boolean b)
     {
         super(R.layout.item_token, parent);
 
@@ -81,10 +84,15 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
         tokenLayout = findViewById(R.id.token_layout);
         extendedInfo = findViewById(R.id.layout_extended_info);
         layoutAppreciation = findViewById(R.id.layout_appreciation);
+        containerLayout = findViewById(R.id.container_layout);
         itemView.setOnClickListener(this);
         assetDefinition = assetService;
         tokensService = tSvs;
         realm = r;
+
+        if(b) {
+            containerLayout.setBackgroundResource(R.drawable.button_round_border_white_fill);
+        }
     }
 
     @Override
