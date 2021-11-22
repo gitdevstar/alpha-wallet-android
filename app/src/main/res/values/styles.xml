@@ -136,7 +136,6 @@
 
     <style name="TransactionDetailsStyle">
         <item name="android:paddingTop">@dimen/dp5</item>
-        <item name="android:background">@color/white</item>
         <item name="android:fontFamily">@font/font_regular</item>
         <item name="android:textSize">9sp</item>
         <item name="android:textStyle">bold</item>

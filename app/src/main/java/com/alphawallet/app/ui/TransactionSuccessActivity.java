@@ -51,7 +51,8 @@ public class TransactionSuccessActivity extends BaseActivity implements Standard
         setTitle(getString(R.string.empty));
 
         FunctionButtonBar functionBar = findViewById(R.id.layoutButtons);
-        functionBar.setupFunctions(this, new ArrayList<>(Collections.singletonList(R.string.action_show_tx_details)));
+        functionBar.setupSecondaryFunction(this, R.string.action_show_tx_details);
+//        functionBar.setupFunctions(this, new ArrayList<>(Collections.singletonList(R.string.action_show_tx_details)));
         functionBar.revealButtons();
 
         viewModel.tryToShowRateAppDialog(this);

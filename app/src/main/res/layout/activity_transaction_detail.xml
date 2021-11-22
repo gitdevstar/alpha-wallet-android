@@ -10,6 +10,7 @@
     <com.alphawallet.app.widget.FunctionButtonBar
         android:layout_alignParentBottom="true"
         android:id="@+id/layoutButtons"
+        android:paddingHorizontal="@dimen/sp17"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
