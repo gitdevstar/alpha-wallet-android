@@ -261,7 +261,7 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
     {
         if (token.isEthereum())     // If token is eth and we get here, it's a testnet chain, show testnet
         {
-            issuer.setVisibility(View.VISIBLE);
+            issuer.setVisibility(View.GONE);
             issuer.setText(R.string.testnet);
             issuerPlaceholder.setVisibility(View.GONE);
             primaryElement = true;
@@ -271,7 +271,7 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
             String issuerName = assetDefinition.getIssuerName(token);
             if (issuerName != null && !issuerName.equalsIgnoreCase(getString(R.string.app_name))) //don't display issuer if it's alphawallet
             {
-                issuer.setVisibility(View.VISIBLE);
+                issuer.setVisibility(View.GONE);
                 issuerPlaceholder.setVisibility(View.VISIBLE);
                 primaryElement = true;
                 issuer.setText(issuerName);

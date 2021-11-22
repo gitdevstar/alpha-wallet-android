@@ -546,7 +546,7 @@ public class WalletFragment extends BaseFragment implements
     {
         if (selectedToken != null && selectedToken.findViewById(R.id.token_layout) != null)
         {
-            selectedToken.findViewById(R.id.token_layout).setBackgroundResource(R.drawable.background_marketplace_event);
+//            selectedToken.findViewById(R.id.token_layout).setBackgroundResource(R.drawable.background_marketplace_event);
         }
         selectedToken = null;
     }

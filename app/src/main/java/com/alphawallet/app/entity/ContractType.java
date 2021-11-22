@@ -11,6 +11,7 @@ public enum ContractType
     NOT_SET,
     ETHEREUM,
     ERC20,
+    BEP20,
     ERC721,
     ERC875_LEGACY,
     ERC875,

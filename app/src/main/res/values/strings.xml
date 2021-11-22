@@ -281,6 +281,7 @@
     <string name="facebook">Facebook</string>
     <string name="twitter">Twitter</string>
     <string name="erc20">ERC 20</string>
+    <string name="bep20">BEP 20</string>
     <string name="erc875">ERC 875</string>
     <string name="erc875legacy">ERC 875*</string>
     <string name="erc1155" translatable="false">ERC 1155</string>
