@@ -226,9 +226,9 @@ public class WalletViewModel extends BaseViewModel
         }
     }
 
-    public double checkBackup()
+    public void checkBackup()
     {
-        if (TextUtils.isEmpty(getWalletAddr()) || System.currentTimeMillis() < (lastBackupCheck + BALANCE_BACKUP_CHECK_INTERVAL)) return 0;
+        if (TextUtils.isEmpty(getWalletAddr()) || System.currentTimeMillis() < (lastBackupCheck + BALANCE_BACKUP_CHECK_INTERVAL)) return;
         lastBackupCheck = System.currentTimeMillis();
         double walletUSDValue = tokensService.getUSDValue();
 
@@ -242,7 +242,6 @@ public class WalletViewModel extends BaseViewModel
                     .subscribe(backupEvent::postValue, this::onTokenBalanceError).isDisposed();
         }
 
-        return walletUSDValue;
     }
 
     private void onTokenBalanceError(Throwable throwable)

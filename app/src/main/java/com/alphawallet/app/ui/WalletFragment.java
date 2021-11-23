@@ -162,10 +162,20 @@ public class WalletFragment extends BaseFragment implements
     private void initViewModel() {
         viewModel = new ViewModelProvider(this, walletViewModelFactory)
                 .get(WalletViewModel.class);
+//        handler.post(new Runnable() {
+//            public void run() {
+//
+//                Log.d("current usd value", "$" + viewModel.getTokensService().getUSDValue());
+//                handler.postDelayed(this, 1000);
+//            }
+//        });
         viewModel.progress().observe(getViewLifecycleOwner(), systemView::showProgress);
         viewModel.tokens().observe(getViewLifecycleOwner(), this::onTokens);
         viewModel.backupEvent().observe(getViewLifecycleOwner(), this::backupEvent);
         viewModel.defaultWallet().observe(getViewLifecycleOwner(), this::onDefaultWallet);
+
+        setTitle();
+
     }
 
     private void initViews(View view) {
@@ -252,8 +262,7 @@ public class WalletFragment extends BaseFragment implements
 
             if (viewModel.getWallet().type != WalletType.WATCH && isVisible)
             {
-                double value = viewModel.checkBackup();
-//                toolbarTitle.setText("$" + value);
+                viewModel.checkBackup();
             }
         });
     }
@@ -357,6 +366,12 @@ public class WalletFragment extends BaseFragment implements
         currentTabPos = tab;
     }
 
+    public void setTitle() {
+        if(viewModel != null)
+        setToolbarTitle("$" + viewModel.getTokensService().getUSDValue());
+        else setToolbarTitle(R.string.wallet_label);
+    }
+
     @Override
     public void onTokenClick(View view, Token token, List<BigInteger> ids, boolean selected) {
         if (selectedToken == null)
@@ -395,6 +410,8 @@ public class WalletFragment extends BaseFragment implements
     {
         if (tokens != null)
         {
+            Log.d("current usd value", "$" + viewModel.getTokensService().getUSDValue());
+            setToolbarTitle("$" + viewModel.getTokensService().getUSDValue());
             adapter.setTokens(tokens);
             checkScrollPosition();
         }

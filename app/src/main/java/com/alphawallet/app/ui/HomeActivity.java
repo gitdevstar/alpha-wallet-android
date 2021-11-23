@@ -446,7 +446,6 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
             walletTitle = getString(R.string.toolbar_header_wallet);
         }
 
-        ((WalletFragment) walletFragment).setToolbarTitle("$0.00");
     }
 
     private void onError(ErrorEnvelope errorEnvelope)
@@ -607,14 +606,15 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
             {
                 showToolbar();
                 viewPager.setCurrentItem(WALLET.ordinal());
-                if (walletTitle == null || walletTitle.isEmpty())
-                {
-                    setTitle(getString(R.string.toolbar_header_wallet));
-                }
-                else
-                {
-                    setTitle(walletTitle);
-                }
+//                if (walletTitle == null || walletTitle.isEmpty())
+//                {
+//                    setTitle(getString(R.string.toolbar_header_wallet));
+//                }
+//                else
+//                {
+//                    setTitle(walletTitle);
+//                }
+                ((WalletFragment) walletFragment).setTitle();
                 selectNavigationItem(WALLET);
                 enableDisplayHomeAsHome(false);
                 invalidateOptionsMenu();
