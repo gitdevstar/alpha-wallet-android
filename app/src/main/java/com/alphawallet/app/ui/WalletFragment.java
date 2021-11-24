@@ -367,8 +367,8 @@ public class WalletFragment extends BaseFragment implements
     }
 
     public void setTitle() {
-        if(viewModel != null)
-        setToolbarTitle("$" + viewModel.getTokensService().getUSDValue());
+        if(viewModel != null && viewModel.getTokensService() != null)
+            setToolbarTitle(String.format("$%.2f", viewModel.getTokensService().getUSDValue()));
         else setToolbarTitle(R.string.wallet_label);
     }
 
@@ -410,8 +410,7 @@ public class WalletFragment extends BaseFragment implements
     {
         if (tokens != null)
         {
-            Log.d("current usd value", "$" + viewModel.getTokensService().getUSDValue());
-            setToolbarTitle("$" + viewModel.getTokensService().getUSDValue());
+            setTitle();
             adapter.setTokens(tokens);
             checkScrollPosition();
         }

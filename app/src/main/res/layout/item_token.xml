@@ -6,7 +6,6 @@
     android:id="@+id/token_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/transparent"
     android:clickable="true"
     android:focusable="true">
 
@@ -20,7 +19,8 @@
             android:id="@+id/container_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white">
+            android:background="@color/white"
+            >
             <TextView
                 android:id="@+id/balance_eth_pending"
                 android:layout_width="wrap_content"

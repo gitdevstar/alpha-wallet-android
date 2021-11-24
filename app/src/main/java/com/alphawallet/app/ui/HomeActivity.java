@@ -606,15 +606,15 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
             {
                 showToolbar();
                 viewPager.setCurrentItem(WALLET.ordinal());
-//                if (walletTitle == null || walletTitle.isEmpty())
-//                {
-//                    setTitle(getString(R.string.toolbar_header_wallet));
-//                }
-//                else
-//                {
-//                    setTitle(walletTitle);
-//                }
-                ((WalletFragment) walletFragment).setTitle();
+                if (walletTitle == null || walletTitle.isEmpty())
+                {
+                    setTitle(getString(R.string.toolbar_header_wallet));
+                }
+                else
+                {
+                    setTitle(walletTitle);
+                    ((WalletFragment) walletFragment).setTitle();
+                }
                 selectNavigationItem(WALLET);
                 enableDisplayHomeAsHome(false);
                 invalidateOptionsMenu();

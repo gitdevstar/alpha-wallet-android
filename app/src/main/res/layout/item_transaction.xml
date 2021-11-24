@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout_background"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="80dp">
@@ -14,10 +13,11 @@
         app:cardElevation="0dp"
         app:cardCornerRadius="@dimen/dp10">
         <LinearLayout
+            android:id="@+id/layout_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:orientation="horizontal"
+            android:background="@color/white"
             android:padding="@dimen/dp8">
             <com.alphawallet.app.widget.TokenIcon
                 android:id="@+id/token_icon"
