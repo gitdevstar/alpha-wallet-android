@@ -31,7 +31,7 @@
                 android:fontFamily="@font/font_light"
                 android:text=""
                 android:textColor="@color/cancel_red"
-                android:textSize="12sp" />
+                android:textSize="@dimen/sp14" />
 
             <RelativeLayout
                 android:id="@+id/wrapped_layout"
@@ -79,7 +79,7 @@
                                 android:layout_toStartOf="@+id/eth_balance"
                                 android:fontFamily="@font/font_regular"
                                 android:textColor="@color/text_black"
-                                android:textSize="14sp"
+                                android:textSize="@dimen/sp16"
                                 android:textStyle="bold"
                                 tools:text="Ethereum" />
 
@@ -94,10 +94,9 @@
                                 android:layout_marginEnd="@dimen/dp8"
                                 android:fontFamily="@font/font_regular"
                                 android:textColor="@color/text_black"
-                                android:textSize="14sp"
+                                android:textSize="@dimen/sp16"
                                 android:textStyle="bold"
                                 tools:text="0" />
-
 
 
                         </RelativeLayout>
@@ -112,10 +111,9 @@
 
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:id="@+id/layout_extended_info"
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
-                                android:layout_weight="1"
                                 android:gravity="bottom"
                                 android:orientation="horizontal">
 
@@ -128,7 +126,7 @@
                                     android:gravity="bottom"
                                     android:text="@string/issuer"
                                     android:textColor="@color/colorPrimaryDark"
-                                    android:textSize="12sp"
+                                    android:textSize="@dimen/sp14"
                                     android:visibility="gone" />
 
                                 <TextView
@@ -139,10 +137,12 @@
                                     android:layout_marginEnd="2dp"
                                     android:fontFamily="@font/font_semibold"
                                     android:gravity="bottom"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
                                     android:textColor="@color/colorPrimaryDark"
-                                    android:textSize="12sp"
+                                    android:textSize="@dimen/sp14"
                                     android:visibility="gone"
-                                    tools:text="Ethereumg" />
+                                    tools:text="Ethereum" />
 
 
                                 <TextView
@@ -153,9 +153,9 @@
                                     android:fontFamily="@font/font_regular"
                                     android:gravity="bottom"
                                     android:textColor="@color/secondary_text"
-                                    android:textSize="12sp"
+                                    android:textSize="@dimen/sp14"
                                     android:visibility="visible"
-                                    tools:text="@string/erc20" />
+                                    tools:text="" />
 
 
                             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -178,16 +178,16 @@
                                     android:fontFamily="@font/font_regular"
                                     android:gravity="bottom"
                                     android:text="@string/unknown_balance_without_symbol"
-                                    android:textColor="@color/secondary_text"
-                                    android:textSize="12sp"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="@dimen/sp14"
                                     android:visibility="gone"
                                     tools:text="$108.73" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text=" "
-                                    android:textSize="12sp" />
+                                    android:text="  "
+                                    android:textSize="@dimen/sp14" />
 
                                 <TextView
                                     android:id="@+id/text_appreciation"
@@ -199,7 +199,7 @@
                                     android:gravity="bottom"
                                     android:text="@string/unknown_balance_without_symbol"
                                     android:textColor="@color/text_dark_gray"
-                                    android:textSize="12sp" />
+                                    android:textSize="@dimen/sp14" />
 
                                 <TextView
                                     android:id="@+id/text_24_hrs"
@@ -209,7 +209,7 @@
                                     android:fontFamily="@font/font_regular"
                                     android:gravity="bottom"
                                     android:text="@string/unknown_balance_without_symbol"
-                                    android:textSize="12sp" />
+                                    android:textSize="@dimen/sp14" />
 
                             </LinearLayout>
 

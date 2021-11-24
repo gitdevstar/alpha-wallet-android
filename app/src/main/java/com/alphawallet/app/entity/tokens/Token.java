@@ -175,6 +175,8 @@ public class Token
         if (isBad()) return TokensService.UNKNOWN_CONTRACT;
         String name = tokenInfo.name == null ? "" : tokenInfo.name;
         String symbol = (tokenInfo.symbol == null || tokenInfo.symbol.length() == 0) ? "" : " (" + tokenInfo.symbol.toUpperCase() + ")";
+        if(name.contains("("))
+            symbol = "";
         return sanitiseString(name + symbol);
     }
 
@@ -184,6 +186,7 @@ public class Token
         String name = assetDefinition != null ? assetDefinition.getTokenName(tokenInfo.chainId, tokenInfo.address, count) : null;
         if (name != null) {
             String symbol = (tokenInfo.symbol == null || tokenInfo.symbol.length() == 0) ? "" : " (" + tokenInfo.symbol.toUpperCase() + ")";
+
             return sanitiseString(name + symbol);
         } else {
             return sanitiseString(getFullName());
@@ -289,9 +292,10 @@ public class Token
             case BEP20:
                 return "Binance";
             case ETHEREUM:
-                return "Ethereum"; //don't display 'ethereum' as contract type
+                if(tokenInfo.symbol.equals("BSC")) return "Binance";
+                else return "Ethereum";
             default:
-                return "Ethereum";
+                return "";
         }
     }
 
@@ -815,6 +819,7 @@ public class Token
             case ERC721_UNDETERMINED:
             case CREATION:
             case ERC20:
+            case BEP20:
             default:
                 return false;
         }

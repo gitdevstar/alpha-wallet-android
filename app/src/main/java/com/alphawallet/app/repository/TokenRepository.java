@@ -412,6 +412,7 @@ public class TokenRepository implements TokenRepositoryType {
                         case ERC721_LEGACY:
                         case ERC721:
                         case ERC20:
+                        case BEP20:
                         case DYNAMIC_CONTRACT:
                             //checking raw balance, this only gives the count of tokens
                             balance = checkUint256Balance(wallet, token.tokenInfo.chainId, token.getAddress());
@@ -1195,6 +1196,10 @@ public class TokenRepository implements TokenRepositoryType {
                 returnType = findContractTypeFromResponse(responseValue, isERC875);
             }
 
+            if(tokenInfo.chainId == 56 || tokenInfo.chainId == 97) {
+                returnType = ContractType.BEP20;
+            }
+
             return returnType;
         }).flatMap(type -> additionalHandling(type, tokenInfo));
     }
@@ -1218,6 +1223,7 @@ public class TokenRepository implements TokenRepositoryType {
         switch (type)
         {
             case ERC20:
+            case BEP20:
             case ERC721:
             case ERC721_LEGACY:
             case ERC721_TICKET:

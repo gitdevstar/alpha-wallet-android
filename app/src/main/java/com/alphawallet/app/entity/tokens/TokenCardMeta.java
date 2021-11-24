@@ -214,6 +214,7 @@ public class TokenCardMeta implements Comparable<TokenCardMeta>, Parcelable
             case CREATION:
             case DELETED_ACCOUNT:
             case ERC20:
+            case BEP20:
             default:
                 return false;
             case ERC721:

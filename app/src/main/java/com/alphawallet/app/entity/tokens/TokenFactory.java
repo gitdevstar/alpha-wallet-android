@@ -52,6 +52,7 @@ public class TokenFactory
                 break;
             case NOT_SET:
             case ERC20:
+            case BEP20:
             case MAYBE_ERC20:
             case OTHER:
             case CURRENCY:
@@ -101,6 +102,7 @@ public class TokenFactory
             case ETHEREUM:
                 tokenInfo.isEnabled = true; //native eth always enabled
             case ERC20:
+            case BEP20:
             case DYNAMIC_CONTRACT:
                 thisToken = new Token(tokenInfo, decimalBalance, updateBlancaTime, networkName, type);
                 thisToken.pendingBalance = decimalBalance;
@@ -175,6 +177,7 @@ public class TokenFactory
                 thisToken = new ERC1155Token(tokenInfo, null, currentTime, networkName);
                 break;
             case ERC20:
+            case BEP20:
             case DYNAMIC_CONTRACT:
             default:
                 thisToken = new Token(

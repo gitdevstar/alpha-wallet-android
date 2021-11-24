@@ -99,7 +99,7 @@
     </style>
 
     <style name="WalletTabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">@dimen/sp17</item>
         <item name="android:textColor">@color/colorHighlight</item>
         <item name="android:fontFamily">@font/font_regular</item>
         <item name="textAllCaps">false</item>
@@ -130,14 +130,14 @@
     <style name="TransactionDetailsSubTitleStyle">
         <item name="android:layout_marginTop">@dimen/big_margin</item>
         <item name="android:fontFamily">@font/font_regular</item>
-        <item name="android:textSize">9sp</item>
+        <item name="android:textSize">@dimen/sp12</item>
         <item name="android:textColor">@color/text_black</item>
     </style>
 
     <style name="TransactionDetailsStyle">
         <item name="android:paddingTop">@dimen/dp5</item>
         <item name="android:fontFamily">@font/font_regular</item>
-        <item name="android:textSize">9sp</item>
+        <item name="android:textSize">@dimen/sp14</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/text_black</item>
     </style>

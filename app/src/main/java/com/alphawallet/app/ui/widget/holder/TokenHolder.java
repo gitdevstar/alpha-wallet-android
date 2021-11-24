@@ -120,7 +120,7 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
             }
 
 //            tokenLayout.setBackgroundResource(R.drawable.background_marketplace_event);
-            if (EthereumNetworkRepository.isPriorityToken(token)) extendedInfo.setVisibility(View.GONE);
+//            if (EthereumNetworkRepository.isPriorityToken(token)) extendedInfo.setVisibility(View.GONE);
 
             //setup name and value (put these together on a single string to make wrap-around text appear better).
             String nameValue =  token.getFullName(assetDefinition, token.getTokenCount());
@@ -203,7 +203,8 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
             primaryElement = true;
             hideIssuerViews();
             layoutAppreciation.setVisibility(View.VISIBLE);
-//            balanceCurrency.setVisibility(View.VISIBLE);
+            balanceCurrency.setVisibility(View.VISIBLE);
+//            setTickerInfo(ticker);
             startTickerRealmListener();
         }
         else
@@ -305,10 +306,10 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
             contractType.setText(contractStringId);
             contractType.setVisibility(View.VISIBLE);
         }
-        else
-        {
-            contractType.setVisibility(View.GONE);
-        }
+//        else
+//        {
+//            contractType.setVisibility(View.GONE);
+//        }
     }
 
     private void startTickerRealmListener()
@@ -341,18 +342,17 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
         String converted = TickerService.getCurrencyString(fiatBalance.doubleValue());
 
         String lbl = getString(R.string.token_balance, "", converted);
-        lbl += " " + ticker.priceSymbol;
         if (correctedBalance.compareTo(BigDecimal.ZERO) > 0)
         {
             issuer.setVisibility(View.GONE);
         }
-        else
-        {
-            lbl = EMPTY_BALANCE;
-        }
+//        else
+//        {
+//            lbl = EMPTY_BALANCE;
+//        }
 
         balanceCurrency.setText(lbl);
-        balanceCurrency.setTextColor(getContext().getColor(R.color.text_dark_gray));
+//        balanceCurrency.setTextColor(getContext().getColor(R.color.text_black));
 
         //This sets the 24hr percentage change (rightmost value)
         try {

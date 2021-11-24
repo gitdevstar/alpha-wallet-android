@@ -208,6 +208,7 @@ public class TokensRealmSource implements TokenLocalSource {
         {
             case ETHEREUM:
             case ERC20:
+            case BEP20:
             case DYNAMIC_CONTRACT:
             case ERC875_LEGACY:
             case ERC875:
@@ -1210,6 +1211,7 @@ public class TokensRealmSource implements TokenLocalSource {
                 case NOT_SET:
                 case ETHEREUM:
                 case ERC20:
+                case BEP20:
                 case OTHER:
                 case CURRENCY:
                 case DELETED_ACCOUNT:

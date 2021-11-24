@@ -321,6 +321,7 @@ public class GasService implements ContractGasProvider
             case ETHEREUM:
                 return hasPayload ? BigInteger.valueOf(GAS_LIMIT_CONTRACT) : BigInteger.valueOf(GAS_LIMIT_MIN);
             case ERC20:
+            case BEP20:
                 return BigInteger.valueOf(GAS_LIMIT_DEFAULT);
             case ERC875_LEGACY:
             case ERC875:
