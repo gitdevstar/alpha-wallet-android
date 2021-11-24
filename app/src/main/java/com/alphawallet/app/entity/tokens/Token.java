@@ -280,6 +280,21 @@ public class Token
         }
     }
 
+    public String getContractNet()
+    {
+        switch (contractType)
+        {
+            case ERC20:
+                return "Ethereum";
+            case BEP20:
+                return "Binance";
+            case ETHEREUM:
+                return "Ethereum"; //don't display 'ethereum' as contract type
+            default:
+                return "Ethereum";
+        }
+    }
+
     public Map<BigInteger, NFTAsset> getTokenAssets() {
         return null;
     }

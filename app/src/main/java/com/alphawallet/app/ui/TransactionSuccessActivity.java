@@ -2,6 +2,7 @@ package com.alphawallet.app.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
@@ -27,6 +28,7 @@ import dagger.android.AndroidInjection;
 public class TransactionSuccessActivity extends BaseActivity implements StandardFunctionInterface
 {
     private String transactionHash;
+    private TextView tvDetail;
 
     @Inject
     TransactionSuccessViewModelFactory viewModelFactory;
@@ -43,12 +45,17 @@ public class TransactionSuccessActivity extends BaseActivity implements Standard
         CopyTextView hashText = findViewById(R.id.tx_hash);
         hashText.setText(transactionHash);
 
+        String contractNet = getIntent().getStringExtra("contract_net");
+
         viewModel = new ViewModelProvider(this, viewModelFactory)
                 .get(TransactionSuccessViewModel.class);
 
         toolbar();
 
         setTitle(getString(R.string.empty));
+
+        tvDetail = findViewById(R.id.text_detail);
+        tvDetail.setText(getString(R.string.transaction_progress_detail, contractNet));
 
         FunctionButtonBar functionBar = findViewById(R.id.layoutButtons);
         functionBar.setupSecondaryFunction(this, R.string.action_show_tx_details);
