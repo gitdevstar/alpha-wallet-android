@@ -612,7 +612,7 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
                 }
                 else
                 {
-                    setTitle(walletTitle);
+//                    setTitle(walletTitle);
                     ((WalletFragment) walletFragment).setTitle();
                 }
                 selectNavigationItem(WALLET);

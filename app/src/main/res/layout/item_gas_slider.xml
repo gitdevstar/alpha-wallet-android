@@ -9,12 +9,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_dove_bar"
         android:fontFamily="@font/font_bold"
         android:text="@string/label_gas_price_gwei"
         android:paddingTop="@dimen/dp10"
         android:paddingBottom="@dimen/dp10"
-        android:layout_marginBottom="@dimen/dp14"
         android:gravity="center_vertical"
         android:textColor="@color/text_black"
         android:textSize="@dimen/sp16" />
@@ -68,7 +66,6 @@
         android:paddingTop="@dimen/dp10"
         android:paddingBottom="@dimen/dp10"
         android:layout_marginTop="@dimen/dp14"
-        android:layout_marginBottom="@dimen/dp14"
         android:gravity="center_vertical"
         android:textColor="@color/text_black"
         android:textSize="@dimen/sp16" />
