@@ -203,7 +203,7 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
             primaryElement = true;
             hideIssuerViews();
             layoutAppreciation.setVisibility(View.VISIBLE);
-            balanceCurrency.setVisibility(View.VISIBLE);
+//            balanceCurrency.setVisibility(View.VISIBLE);
 //            setTickerInfo(ticker);
             startTickerRealmListener();
         }

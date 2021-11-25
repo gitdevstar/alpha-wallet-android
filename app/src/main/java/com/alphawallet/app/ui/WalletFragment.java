@@ -199,8 +199,8 @@ public class WalletFragment extends BaseFragment implements
             adapter.setWalletAddress(wallet.address);
         }
 
-        addressAvatar.bind(wallet, this);
-        addressAvatar.setVisibility(View.VISIBLE);
+//        addressAvatar.bind(wallet, this);
+//        addressAvatar.setVisibility(View.VISIBLE);
 
         //Do we display new user backup popup?
         ((HomeActivity) getActivity()).showBackupWalletDialog(wallet.lastBackupTime > 0);
