@@ -306,10 +306,11 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
             contractType.setText(contractStringId);
             contractType.setVisibility(View.VISIBLE);
         }
-//        else
-//        {
+        else
+        {
 //            contractType.setVisibility(View.GONE);
-//        }
+            contractType.setText("");
+        }
     }
 
     private void startTickerRealmListener()

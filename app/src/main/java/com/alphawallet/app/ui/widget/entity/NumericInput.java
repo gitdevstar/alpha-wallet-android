@@ -45,6 +45,8 @@ public class NumericInput extends AppCompatAutoCompleteTextView
     public BigDecimal getBigDecimalValue()
     {
         CharSequence text = super.getText();
+        if(text.toString().isEmpty())
+            text = "0";
         BigDecimal value = BigDecimal.ZERO;
 
         try
