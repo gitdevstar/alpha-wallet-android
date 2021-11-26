@@ -4,7 +4,6 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     android:orientation="vertical">
 
     <include layout="@layout/layout_simple_toolbar" />
@@ -13,7 +12,7 @@
         android:id="@+id/layout_holder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background_card">
+        android:background="@color/background_color">
 
         <LinearLayout
             android:id="@+id/holding_view"
@@ -37,20 +36,20 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
-                    android:fontFamily="@font/font_light"
+                    android:fontFamily="@font/font_regular"
                     android:gravity="center"
                     android:text="@string/my_wallet_address"
                     android:textColor="@color/text_black"
-                    android:textSize="25sp" />
+                    android:textSize="@dimen/sp28" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/font_light"
+                    android:fontFamily="@font/font_regular"
                     android:gravity="center"
                     android:text="@string/scan_qr_label"
                     android:textColor="@color/text_black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/sp18" />
 
             </LinearLayout>
 
@@ -97,7 +96,7 @@
             android:fontFamily="@font/font_semibold"
             android:gravity="center"
             android:padding="15dp"
-            android:textSize="13sp" />
+            android:textSize="@dimen/sp15" />
 
         <TextView
             android:id="@+id/text_contract_address"
@@ -112,7 +111,7 @@
             android:textAllCaps="true"
             android:textColor="@color/light_gray"
             android:visibility="gone"
-            android:textSize="10sp"/>
+            android:textSize="@dimen/sp12"/>
 
         <LinearLayout
             android:id="@+id/layout_contract"
@@ -135,7 +134,7 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:text=""
-                android:textSize="12sp" />
+                android:textSize="@dimen/sp15" />
 
             <Button
                 android:id="@+id/copy_contract_action"
@@ -148,7 +147,7 @@
                 android:text="Copy"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/sp18" />
 
         </LinearLayout>
 

@@ -397,7 +397,7 @@ public class MyAddressActivity extends BaseActivity implements AmountReadyCallba
                 request = new EIP681Request(displayAddress, networkInfo.chainId, weiAmount);
                 eip681String = request.generateRequest();
             }
-            else if (token.isERC20())
+            else if (token.isERC20() || token.isBEP20())
             {
                 request = new EIP681Request(displayAddress, token.getAddress(), networkInfo.chainId, weiAmount);
                 eip681String = request.generateERC20Request();

@@ -618,6 +618,10 @@ public class Token
     {
         return contractType == ContractType.ERC20;
     }
+    public boolean isBEP20()
+    {
+        return contractType == ContractType.BEP20;
+    }
     public boolean isEthereum()
     {
         return contractType == ContractType.ETHEREUM;
