@@ -15,13 +15,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1"
-        android:fontFamily="@font/font_regular"
-        android:gravity="center"
+        android:fontFamily="@font/font_semibold"
         android:maxLines="2"
-        android:lineHeight="12pt"
+        android:layout_marginHorizontal="@dimen/sp12"
         tools:text="0xbc9a1026a4bc6f0ba8bbe486d1d09da5732b39e4"
         android:textColor="@color/text_black"
-        android:textSize="@dimen/sp17" />
+        android:textSize="@dimen/sp12" />
 
     <ImageView
         android:id="@+id/img_copy"

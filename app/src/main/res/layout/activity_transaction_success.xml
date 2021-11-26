@@ -43,13 +43,14 @@
         <com.alphawallet.app.widget.CopyTextView
             android:id="@+id/tx_hash"
             android:layout_width="match_parent"
-            android:layout_height="67dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/backup_seed_image"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dp10"
-            android:background="@drawable/background_round_big"
+            custom:minHeightView="67"
+            custom:backgroundView="@drawable/background_round_big"
             custom:bold="true"
-            custom:gravity="center"
+            custom:gravity="center_vertical"
             custom:textColor="@color/text_black" />
 
         <TextView

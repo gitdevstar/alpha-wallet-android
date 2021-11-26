@@ -91,8 +91,6 @@
     <style name="WalletTabLayoutStyle" parent="Widget.Design.TabLayout">
         <item name="tabIndicatorColor">@color/colorHighlight</item>
         <item name="tabIndicatorHeight">3dp</item>
-        <item name="tabPaddingStart">25dp</item>
-        <item name="tabPaddingEnd">25dp</item>
         <item name="tabBackground">@color/colorPrimary</item>
         <item name="tabTextAppearance">@style/WalletTabTextAppearance</item>
         <item name="tabSelectedTextColor">@android:color/white</item>
@@ -137,7 +135,7 @@
     <style name="TransactionDetailsStyle">
         <item name="android:paddingTop">@dimen/dp5</item>
         <item name="android:fontFamily">@font/font_regular</item>
-        <item name="android:textSize">@dimen/sp14</item>
+        <item name="android:textSize">@dimen/sp12</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/text_black</item>
     </style>

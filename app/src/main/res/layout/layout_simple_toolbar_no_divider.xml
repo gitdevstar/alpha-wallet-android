@@ -23,11 +23,7 @@
         android:layout_height="30dp"
         android:layout_marginHorizontal="15dp"
         android:visibility="gone"/>
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginHorizontal="15dp"
-        android:src="@drawable/ic_wallet_profile"/>
+
 
     <TextView
         android:id="@+id/toolbar_title"

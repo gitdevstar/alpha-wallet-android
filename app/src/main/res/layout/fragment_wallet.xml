@@ -30,7 +30,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:background="@drawable/background_tab_layout"
-            app:tabGravity="center"
             app:tabIndicatorColor="@color/colorTabHighlight"
             app:tabIndicatorFullWidth="true"
             app:tabSelectedTextColor="@color/colorTabHighlight"

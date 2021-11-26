@@ -69,7 +69,8 @@ public class TokenHolder extends BinderViewHolder<TokenCardMeta> implements View
 
     public TokenHolder(ViewGroup parent, AssetDefinitionService assetService, TokensService tSvs, Realm r, boolean b)
     {
-        super(R.layout.item_token, parent);
+
+        super(b ? R.layout.item_token_detail : R.layout.item_token, parent);
 
         tokenIcon = findViewById(R.id.token_icon);
         balanceEth = findViewById(R.id.eth_balance);
