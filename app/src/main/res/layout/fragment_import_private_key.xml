@@ -32,7 +32,7 @@
         android:fontFamily="@font/font_regular"
         android:gravity="center"
         android:textColor="@color/text_black"
-        android:textSize="@dimen/sp12"
+        android:textSize="@dimen/sp13"
         android:text="@string/suggestion_private_key" />
 
     </LinearLayout>
@@ -57,7 +57,7 @@
             android:linksClickable="true"
             android:text="@string/import_from_cloud"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/sp12" />
+            android:textSize="@dimen/sp13" />
 
     <Button
         android:id="@+id/import_action_pk"

@@ -72,7 +72,7 @@
                         android:fontFamily="@font/font_semibold"
                         android:layout_marginEnd="3dp"
                         android:textColor="@color/text_black"
-                        android:textSize="@dimen/sp12"
+                        android:textSize="@dimen/sp13"
                         android:lineSpacingExtra="7sp"
                         tools:text="$0.55" />
 
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/font_regular"
                         android:textColor="@color/dove"
-                        android:textSize="@dimen/sp12"
+                        android:textSize="@dimen/sp13"
                         tools:text="(0.00362 ETH)" />
 
                 </LinearLayout>
@@ -94,7 +94,7 @@
                     android:fontFamily="@font/font_regular"
                     android:layout_marginTop="3dp"
                     android:textColor="@color/dove"
-                    android:textSize="@dimen/sp12"
+                    android:textSize="@dimen/sp13"
                     tools:text="Gas Price: 45" />
             </LinearLayout>
 
@@ -112,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/font_regular"
                     android:textColor="@color/text_black"
-                    android:textSize="@dimen/sp12"
+                    android:textSize="@dimen/sp13"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="8dp"
                     tools:text=" ≈ 2 minutes" />

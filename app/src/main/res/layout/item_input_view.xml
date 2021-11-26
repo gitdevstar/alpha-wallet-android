@@ -119,7 +119,7 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/font_regular"
         android:textColor="@color/green"
-        android:textSize="@dimen/sp12"
+        android:textSize="@dimen/sp13"
         android:visibility="gone"
         tools:text="Awesome Tokens" />
 
@@ -134,7 +134,7 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/font_regular"
         android:textColor="@color/danger"
-        android:textSize="@dimen/sp12"
+        android:textSize="@dimen/sp13"
         android:visibility="gone"
         tools:text="That address already exists" />
 

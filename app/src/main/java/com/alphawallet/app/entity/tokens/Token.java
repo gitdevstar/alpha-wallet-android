@@ -88,9 +88,9 @@ public class Token
         this.updateBlancaTime = updateBlancaTime;
         this.shortNetworkName = networkName;
         this.contractType = type;
-        if(type == ContractType.ERC20 && tokenInfo.chainId == 56) {
-            this.contractType = ContractType.BEP20;
-        }
+//        if(type == ContractType.ERC20 && tokenInfo.chainId == 56) {
+//            this.contractType = ContractType.BEP20;
+//        }
         this.pendingBalance = balance;
         this.lastTxCheck = 0;
         this.lastBlockCheck = 0;
@@ -273,7 +273,8 @@ public class Token
         switch (contractType)
         {
             case ERC20:
-                return R.string.erc20;
+                if(tokenInfo.chainId == 56) return R.string.bep20;
+                else return R.string.erc20;
             case BEP20:
                 return R.string.bep20;
             case ETHEREUM:

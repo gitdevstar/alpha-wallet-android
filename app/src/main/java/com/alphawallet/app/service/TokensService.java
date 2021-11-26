@@ -668,7 +668,7 @@ public class TokensService
         List<TokenCardMeta> allERC20 = new ArrayList<>();
         for (TokenCardMeta tcm : tokenList)
         {
-            if (tcm.type == ContractType.ERC20)
+            if (tcm.type == ContractType.ERC20 || tcm.type == ContractType.BEP20)
             {
                 allERC20.add(tcm);
             }

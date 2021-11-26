@@ -124,7 +124,7 @@
                     android:fontFamily="@font/font_regular"
                     android:text="@string/version"
                     android:textColor="@color/text_black"
-                    android:textSize="@dimen/sp12" />
+                    android:textSize="@dimen/sp13" />
 
                 <TextView
                     android:id="@+id/text_version"
@@ -134,7 +134,7 @@
                     android:layout_centerVertical="true"
                     android:fontFamily="@font/font_regular"
                     android:textColor="@color/text_black"
-                    android:textSize="@dimen/sp12" />
+                    android:textSize="@dimen/sp13" />
 
             </RelativeLayout>
 
@@ -158,7 +158,7 @@
                     android:fontFamily="@font/font_regular"
                     android:text="@string/tokenscript_compatibility"
                     android:textColor="@color/text_black"
-                    android:textSize="@dimen/sp12" />
+                    android:textSize="@dimen/sp13" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -173,7 +173,7 @@
                         android:fontFamily="@font/font_regular"
                         android:textColor="@color/text_black"
                         android:text="@string/version"
-                        android:textSize="@dimen/sp12" />
+                        android:textSize="@dimen/sp13" />
 
                 <TextView
                         android:id="@+id/text_tokenscript_compatibility"
@@ -182,7 +182,7 @@
                         android:layout_marginLeft="@dimen/default_gap"
                         android:fontFamily="@font/font_regular"
                         android:textColor="@color/text_black"
-                        android:textSize="@dimen/sp12" />
+                        android:textSize="@dimen/sp13" />
                 </LinearLayout>
             </RelativeLayout>
 

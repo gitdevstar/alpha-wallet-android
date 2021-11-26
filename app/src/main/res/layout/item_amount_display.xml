@@ -38,7 +38,7 @@
             android:fontFamily="@font/font_semibold"
             android:gravity="start"
             tools:text="1.234 ETH ≈ 500.23 USD"
-            android:textSize="@dimen/sp12"/>
+            android:textSize="@dimen/sp13"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tokens_list"

@@ -40,7 +40,7 @@
         android:fontFamily="@font/font_semibold"
         android:gravity="start"
         tools:text="0x123456...0421"
-        android:textSize="@dimen/sp12"/>
+        android:textSize="@dimen/sp13"/>
 
     <ImageView
         android:id="@+id/image_more"

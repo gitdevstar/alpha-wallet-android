@@ -80,7 +80,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/font_light"
                     android:textColor="@color/dove"
-                    android:textSize="@dimen/sp12"
+                    android:textSize="@dimen/sp13"
                     tools:text="0x123456778 ... 3434" />
 
                 <TextView
@@ -94,7 +94,7 @@
                     android:maxLines="1"
                     android:textAppearance="?attr/textAppearanceListItem"
                     android:textColor="@color/dove"
-                    android:textSize="@dimen/sp12"
+                    android:textSize="@dimen/sp13"
                     android:visibility="visible"
                     tools:text="0.00" />
 
