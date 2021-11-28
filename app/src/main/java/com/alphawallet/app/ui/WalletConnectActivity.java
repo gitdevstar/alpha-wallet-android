@@ -288,7 +288,7 @@ public class WalletConnectActivity extends BaseActivity implements ActionSheetCa
         chainName = findViewById(R.id.chain_name);
         chainIcon = findViewById(R.id.chain_icon);
 
-        progressBar.setVisibility(View.VISIBLE);
+//        progressBar.setVisibility(View.VISIBLE);
         infoLayout.setVisibility(View.GONE);
 
         functionBar = findViewById(R.id.layoutButtons);
