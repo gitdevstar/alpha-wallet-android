@@ -36,6 +36,7 @@ import com.alphawallet.app.widget.AWalletAlertDialog;
 import com.alphawallet.app.widget.AddWalletView;
 import com.alphawallet.app.widget.SignTransactionDialog;
 import com.alphawallet.app.widget.SystemView;
+import com.alphawallet.app.widget.UserAvatar;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.snackbar.Snackbar;
@@ -64,6 +65,8 @@ public class WalletsActivity extends BaseActivity implements
     private WalletsAdapter adapter;
     private final Handler handler = new Handler();
     private Wallet selectedWallet;
+
+    private UserAvatar addressAvatar;
 
     private boolean requiresHomeRefresh;
     private String dialogError;
@@ -129,6 +132,9 @@ public class WalletsActivity extends BaseActivity implements
         systemView.attachRecyclerView(list);
         systemView.attachSwipeRefreshLayout(refreshLayout);
         refreshLayout.setOnRefreshListener(this::onSwipeRefresh);
+
+        addressAvatar = findViewById(R.id.user_address_blockie);
+        addressAvatar.setVisibility(View.VISIBLE);
     }
 
     private void onSwipeRefresh() {

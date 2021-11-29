@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <include layout="@layout/layout_simple_toolbar" />
+    <include layout="@layout/layout_simple_toolbar_no_divider" />
     <!-- NB: Wrapped in RelativeLayout to enable the 'big green success tick' -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

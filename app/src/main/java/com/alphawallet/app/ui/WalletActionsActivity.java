@@ -47,6 +47,7 @@ public class WalletActionsActivity extends BaseActivity implements Runnable, Vie
     WalletActionsViewModel viewModel;
 
     private UserAvatar walletIcon;
+    private UserAvatar addressAvatar;
     private TextView walletBalance;
     private TextView walletBalanceCurrency;
     private TextView walletNameText;
@@ -81,6 +82,9 @@ public class WalletActionsActivity extends BaseActivity implements Runnable, Vie
         } else {
             finish();
         }
+
+        addressAvatar = findViewById(R.id.user_address_blockie);
+        addressAvatar.setVisibility(View.VISIBLE);
 
         initViewModel();
     }
