@@ -369,7 +369,7 @@ public class WalletFragment extends BaseFragment implements
     public void setTitle() {
         if(viewModel != null && viewModel.getTokensService() != null)
             setToolbarTitle(String.format("$%.2f", viewModel.getTokensService().getUSDValue()));
-        else setToolbarTitle(R.string.wallet_label);
+        else setToolbarTitle("$0.00");
     }
 
     @Override
